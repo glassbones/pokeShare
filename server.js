@@ -8,7 +8,7 @@ const port = 3000;
 app.use(cors()) 
 
 app.get("/", function (req, res) {
-  const filePath = path.resolve(__dirname, "./public", "index.html");
+  const filePath = path.resolve(__dirname, "./build", "index.html");
 
   fs.readFile(filePath, "utf8", function (err, data) {
     if (err) {
@@ -26,7 +26,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/about", function (req, res) {
-  const filePath = path.resolve(__dirname, "./public", "index.html");
+  const filePath = path.resolve(__dirname, "./build", "index.html");
 
   fs.readFile(filePath, "utf8", function (err, data) {
     if (err) {
@@ -41,7 +41,7 @@ app.get("/about", function (req, res) {
 });
 
 app.get("/contact", function (req, res) {
-  const filePath = path.resolve(__dirname, "./public", "index.html");
+  const filePath = path.resolve(__dirname, "./build", "index.html");
 
   fs.readFile(filePath, "utf8", function (err, data) {
     if (err) {
@@ -55,10 +55,10 @@ app.get("/contact", function (req, res) {
   });
 });
 
-app.use(express.static(path.resolve(__dirname, "./public")));
+app.use(express.static(path.resolve(__dirname, "./build")));
 
 app.get("*", function (req, res) {
-  const filePath = path.resolve(__dirname, "./public", "index.html");
+  const filePath = path.resolve(__dirname, "./build", "index.html");
   fs.readFile(filePath, "utf8", function (err, data) {
     if (err) {
       return console.log(err);
