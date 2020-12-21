@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors()) 
-/*
+
 app.get("/", function (req, res) {
   const filePath = path.resolve(__dirname, "./build", "index.html");
 
@@ -25,8 +25,8 @@ app.get("/", function (req, res) {
   });
 });
 
-app.get("/about", function (req, res) {
-  const filePath = path.resolve(__dirname, "./build", "index.html");
+app.get("/referred/*", function (req, res) {
+  const filePath = path.resolve(__dirname, ".build", "index.html");
 
   fs.readFile(filePath, "utf8", function (err, data) {
     if (err) {
@@ -40,8 +40,24 @@ app.get("/about", function (req, res) {
   });
 });
 
+
+app.get("/referred", function (req, res) {
+  const filePath = path.resolve(__dirname, ".build", "index.html");
+
+  fs.readFile(filePath, "utf8", function (err, data) {
+    if (err) {
+      return console.log(err);
+    }
+
+    data = data.replace(/{{title}}/, "About | PokeShare");
+    data = data.replace(/{{description}}/, "About PokeShare");
+
+    res.send(data);
+  });
+});
+/*
 app.get("/contact", function (req, res) {
-  const filePath = path.resolve(__dirname, "./build", "index.html");
+  const filePath = path.resolve(__dirname, "build", "index.html");
 
   fs.readFile(filePath, "utf8", function (err, data) {
     if (err) {
@@ -76,13 +92,14 @@ app.get("*", function (req, res) {
   });
 });
 
-*/
+
 
 app.use(express.static(path.join(__dirname, 'build')));
-
+/*
 // PATH CONFIGURATION TO RESPOND TO A REQUEST TO STATIC ROUTE REQUEST BY SERVING index.html
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+*/
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
