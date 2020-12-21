@@ -56,7 +56,8 @@ app.get("/contact", function (req, res) {
 });
 
 app.use(express.static(path.resolve(__dirname, "./build")));
-*/
+
+
 
 app.get("*", function (req, res) {
   const filePath = path.resolve(__dirname, 'build/index.html'); //../client/build
@@ -73,6 +74,15 @@ app.get("*", function (req, res) {
 
     res.send(data);
   });
+});
+
+*/
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+// PATH CONFIGURATION TO RESPOND TO A REQUEST TO STATIC ROUTE REQUEST BY SERVING index.html
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
