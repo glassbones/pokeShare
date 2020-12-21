@@ -18,7 +18,7 @@ module.exports = {
   mode: 'development',
   plugins: [
     new HTMLWebpackPlugin({
-      template: 'index.html'
+      template: path.resolve('./index.html')
     })
   ],
   devServer: {
