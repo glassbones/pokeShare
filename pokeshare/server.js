@@ -15,10 +15,10 @@ app.get("/", function (req, res) {
       return console.log(err);
     }
 
-    data = data.replace(/{{title}}/, "Sachin Verma");
+    data = data.replace(/{{title}}/, "PokeShare");
     data = data.replace(
       /{{description}}/,
-      "Sachin Verma's personal site and blog"
+      "A pokemon sharing app"
     );
 
     res.send(data);
@@ -33,8 +33,8 @@ app.get("/about", function (req, res) {
       return console.log(err);
     }
 
-    data = data.replace(/{{title}}/, "About | Sachin Verma");
-    data = data.replace(/{{description}}/, "About Sachin Verma");
+    data = data.replace(/{{title}}/, "About | PokeShare");
+    data = data.replace(/{{description}}/, "About PokeShare");
 
     res.send(data);
   });
@@ -48,8 +48,8 @@ app.get("/contact", function (req, res) {
       return console.log(err);
     }
 
-    data = data.replace(/{{title}}/, "Contact | Sachin Verma");
-    data = data.replace(/{{description}}/, "Contact Sachin Verma");
+    data = data.replace(/{{title}}/, "Contact | PokeShare");
+    data = data.replace(/{{description}}/, "Contact PokeShare");
 
     res.send(data);
   });
@@ -64,10 +64,10 @@ app.get("*", function (req, res) {
       return console.log(err);
     }
 
-    data = data.replace(/{{title}}/, "Sachin Verma");
+    data = data.replace(/{{title}}/, "PokeShare");
     data = data.replace(
       /{{description}}/,
-      "Sachin Verma's personal site and blog"
+      "PokeShare pokemon sharing app"
     );
 
     res.send(data);

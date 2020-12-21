@@ -9,7 +9,7 @@
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sachin Verma",
+  "author": "PokeShare",
   "license": "ISC",
   "babel": {
     "presets": [

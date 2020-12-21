@@ -4,7 +4,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './index.js',
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'build'), //public
     filename: 'index_bundle.js',
     publicPath: '/'
   },
@@ -22,6 +22,7 @@ module.exports = {
     })
   ],
   devServer: {
+    contentBase: "./build",
     port: 5000,
     historyApiFallback: {
       disableDotRule: true
