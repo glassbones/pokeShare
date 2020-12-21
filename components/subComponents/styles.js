@@ -1,8 +1,8 @@
-require("svg-url-loader!../../public/data/pokemonData");
+require("svg-url-loader!../../resources/data/pokemonData");
 
 export const style_Headers = {
     _p: { marginTop: "-20px", marginBottom: "20px" },
-    //_pokeSvg: { width: "8%", height: "auto", marginRight: "5px", background: url("../../public/data/pokemonData") }
+    //_pokeSvg: { width: "8%", height: "auto", marginRight: "5px", background: url("../../resources/data/pokemonData") }
   };
   
   export const style_Container = {

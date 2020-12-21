@@ -1,8 +1,8 @@
 import React from "react";
 import Home from "./Home";
 import Referred from "./Referred";
-//import "../public/styles.css";
-require("../public/styles.css")
+//import "../resources/styles.css";
+require("../resources/styles.css")
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 

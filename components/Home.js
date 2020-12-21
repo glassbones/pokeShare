@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Headers, ShareButtons } from "./subComponents";
 import ReactSearchBox from "react-search-box";
-import pokemon from "../public/data/pokemonData";
+import pokemon from "../resources/data/pokemonData";
 
 
 export default () => {

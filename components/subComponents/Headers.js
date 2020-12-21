@@ -1,8 +1,8 @@
 import React from "react";
 import { style_Headers } from "./styles";
-//require("svg-url-loader!../../public/data/pokemonData");
-//import pokeSvg from "../../public/data/pokemonData";
-require("../../public/styles.css")
+//require("svg-url-loader!../../resources/data/pokemonData");
+//import pokeSvg from "../../resources/data/pokemonData";
+require("../../resources/styles.css")
 const { _p, /*_pokeSvg*/ } = style_Headers;
 
 export default ({ mainText, subText }) => (

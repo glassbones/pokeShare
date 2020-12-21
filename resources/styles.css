@@ -1,0 +1,76 @@
+body {
+    font-family: "Roboto";
+    font-size: 14px;
+  }
+  
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    padding-top: 85px;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px; 
+    background-image: url("https://png2.cleanpng.com/sh/90de7085c0b22cf3470257eafdbc1bbd/L0KzQYq3V8MyN6l2j5H0aYP2gLBuTgRzaZ94iNN7ZX7miX79ifRmd15sed9ucz3pgrbsTgBwc5Zned51LYDxd376ifxpd6ZqjOZuLXTyh7BzjBFlNWMyiNDwLXHwPYbrVMFkOZQAetgEZkK7Poq5UcY2PmU1SacBNEW8QIa6V8c5PGoziNDw/kisspng-transparency-video-games-free-pokeball-png-silhouette-download-2-png-am-5d41c1c9bf9f28.9216564015645905377849.png");
+    background-repeat: no-repeat;
+    -webkit-background-position: no-repeat;
+    -moz-background-position: no-repeat;
+    -o-background-position: no-repeat;
+    -webkit-background-position: center;
+    -moz-background-position: center;
+    -o-background-position: center;
+    background-position: center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+  }
+  
+  .hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow:hover,
+  .hvr-grow:focus,
+  .hvr-grow:active {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+
