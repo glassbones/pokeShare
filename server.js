@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors()) 
-
+/*
 app.get("/", function (req, res) {
   const filePath = path.resolve(__dirname, "./build", "index.html");
 
@@ -56,9 +56,10 @@ app.get("/contact", function (req, res) {
 });
 
 app.use(express.static(path.resolve(__dirname, "./build")));
+*/
 
 app.get("*", function (req, res) {
-  const filePath = path.resolve(__dirname, "./build", "index.html");
+  const filePath = path.resolve(__dirname, 'build/index.html'); //../client/build
   fs.readFile(filePath, "utf8", function (err, data) {
     if (err) {
       return console.log(err);
